@@ -33,9 +33,9 @@ export default function TextForm(props) {
     setText(joinedWords);
   };
   // copy to clipboard
-//   const handleCopyText = () => {
-//     navigator.clipboard.writeText(text);
-//   };
+  //   const handleCopyText = () => {
+  //     navigator.clipboard.writeText(text);
+  //   };
   //   CLear text
   const handleClearText = () => {
     let newText = "";
@@ -77,38 +77,38 @@ export default function TextForm(props) {
             rows="6"
           ></textarea>
         </div>
-        <div className="btn-group" role="group" >
-          <button className="btn btn-primary mx-1" onClick={handleUpperCase}>
+        <div className="btn-group" role="group">
+          <button className="btn btn-primary" onClick={handleUpperCase}>
             Uppercase
           </button>
           <button className="btn btn-primary" onClick={handleLowerCase}>
             Lowercase
           </button>
-          <button className="btn btn-primary mx-1" onClick={handleCapitalize}>
+          <button className="btn btn-primary" onClick={handleCapitalize}>
             Capitalize
           </button>
         </div>
-        <button className="btn btn-secondary mx-1" onClick={handleExtraSpaces}>
+        <button className="btn btn-secondary mx-1 my-2" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
         {/* <button className="btn btn-secondary mx-1" onClick={handleCopyText}>
           Copy
         </button> */}
-        <button className="btn btn-warning mx-1" onClick={speak}>
-          Speak
-        </button>
-        <button className="btn btn-success mx-1" onClick={handleReverse}>
-          Reverse
-        </button>
         <button className="btn btn-danger mx-1" onClick={handleClearText}>
           Clear
         </button>
       </div>
-      <div className="container my-3">
+      <div className="container my-2">
+        <button className="btn btn-warning" onClick={speak}>
+          Speak
+        </button>
+        <button className="btn btn-success mx-2" onClick={handleReverse}>
+          Reverse
+        </button>
+      </div>
+      <div className="container my-4">
         <h2>Summary</h2>
-        {/* text.split("") provide an array */}
         <p>
-          {" "}
           {text.split(" ").length} Word and {text.length} characters
         </p>
         <p> {0.08 * text.split(" ").length} Minutes to read</p>
