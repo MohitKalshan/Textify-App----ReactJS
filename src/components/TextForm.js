@@ -32,11 +32,7 @@ export default function TextForm(props) {
     });
     setText(joinedWords);
   };
-  // copy to clipboard
-  //   const handleCopyText = () => {
-  //     navigator.clipboard.writeText(text);
-  //   };
-  //   CLear text
+ 
   const handleClearText = () => {
     let newText = "";
     setText(newText);
@@ -48,7 +44,7 @@ export default function TextForm(props) {
     window.speechSynthesis.speak(msg);
   };
   //   Reverse text
-  const handleReverse = (event) => {
+  const handleReverse = () => {
     /* Convert string to array*/
     let strArr = text.split("");
     strArr = strArr.reverse();
@@ -67,7 +63,7 @@ export default function TextForm(props) {
   return (
     <>
       <div>
-        <div className="mb-3">
+        <div className="mb-3" style={{color:props.mode==='dark'?'white':'black'}}>
           <h1>{props.heading}</h1>
           <textarea
             className="form-control"
@@ -75,6 +71,7 @@ export default function TextForm(props) {
             onChange={handleOnChange}
             id="myBox"
             rows="6"
+            style={{backgroundColor:props.mode==='dark'?'#6c6c6c':'white',color:props.mode==='dark'?'white':'black'}}
           ></textarea>
         </div>
         <div className="btn-group" role="group">
@@ -106,14 +103,14 @@ export default function TextForm(props) {
           Reverse
         </button>
       </div>
-      <div className="container my-4">
+      <div className="container my-4" style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Summary</h2>
         <p>
           {text.split(" ").length} Word and {text.length} characters
         </p>
         <p> {0.08 * text.split(" ").length} Minutes to read</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0?text:"Enter text to preview"}</p>
       </div>
     </>
   );
