@@ -71,7 +71,7 @@ export default function TextForm(props) {
             onChange={handleOnChange}
             id="myBox"
             rows="6"
-            style={{backgroundColor:props.mode==='dark'?'#6c6c6c':'white',color:props.mode==='dark'?'white':'black'}}
+            style={{backgroundColor:props.mode==='dark'?'#c0c0c0':'white',color:props.mode==='dark'?'white':'black'}}
           ></textarea>
         </div>
         <div className="btn-group" role="group">
@@ -85,7 +85,7 @@ export default function TextForm(props) {
             Capitalize
           </button>
         </div>
-        <button className="btn btn-secondary mx-1 my-2" onClick={handleExtraSpaces}>
+        <button className="btn btn-dark mx-1 my-2" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
         {/* <button className="btn btn-secondary mx-1" onClick={handleCopyText}>
