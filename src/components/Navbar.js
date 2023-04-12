@@ -6,6 +6,7 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} `}
     >
       <div className="container-fluid">
+        <img src="../logo.png" alt="logo" style={{width:45,height:45}} />
         <a className="navbar-brand" href="/">
           <h2>
             <b>{props.title}</b>
