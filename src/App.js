@@ -34,7 +34,7 @@ function App() {
       <Navbar title="Textify" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container my-3">
-        <TextForm heading="What do you textify?" mode={mode}/>
+        <TextForm showAlert={showAlert} heading="What do you textify?" mode={mode}/>
       </div>
     </>
   );
