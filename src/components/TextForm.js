@@ -5,11 +5,13 @@ export default function TextForm(props) {
   const handleUpperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Text converted to uppercase","success");
   };
   //   Convert to lower case
   const handleLowerCase = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Text converted to lowercase","success");
   };
   //   Capitalize text
   const handleCapitalize = () => {
@@ -18,6 +20,7 @@ export default function TextForm(props) {
       .map((elem) => elem.charAt(0).toUpperCase() + elem.slice(1))
       .join(" ");
     setText(newText);
+    props.showAlert("Text is capitalized","success");
   };
   //   Ṛemove extra spaces
   const handleExtraSpaces = () => {
@@ -31,17 +34,20 @@ export default function TextForm(props) {
       }
     });
     setText(joinedWords);
+    props.showAlert("Extra spaces are removed","success");
   };
- 
+  
   const handleClearText = () => {
     let newText = "";
     setText(newText);
+    props.showAlert("Text is cleared","success");
   };
   // Text speaking
   const speak = () => {
     let msg = new SpeechSynthesisUtterance();
     msg.text = text;
     window.speechSynthesis.speak(msg);
+    props.showAlert("Text to Speece On","success");
   };
   //   Reverse text
   const handleReverse = () => {
@@ -51,6 +57,7 @@ export default function TextForm(props) {
     /* Convert array to string*/
     let newText = strArr.join("");
     setText(newText);
+    props.showAlert("Text is reversed","success");
   };
 
   // take values from textarea
