@@ -19,10 +19,12 @@ function App() {
   const toggleMode= ()=>{
     if (mode==="light"){
       setMode("dark");
+      showAlert("Dark Mode Enabled","success");
       document.body.style.backgroundColor = "#708090";
       document.body.style.color = "white";
     }else{
       setMode("light");
+      showAlert("Light Mode Enabled","success");
       document.body.style.backgroundColor = "skyblue";
       document.body.style.color = "black";
     }
