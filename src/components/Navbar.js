@@ -8,12 +8,11 @@ export default function Navbar(props) {
     >
       <div className="container-fluid">
         <img src="../logo.png" alt="logo" style={{width:45,height:45}} />
-        {/* <Link className="navbar-brand" to="/"> */}
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <h2>
             <b>{props.title}</b>
           </h2>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
