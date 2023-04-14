@@ -4,10 +4,7 @@ import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
-// import {
-//   Route,
-//   Routes,
-// } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -40,21 +37,20 @@ function App() {
       <Navbar title="Textify" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        {/* <Routes>
+        <Routes>
           <Route
             exact
             path="/"
-            element={ */}
+            element={
               <TextForm
                 showAlert={showAlert}
                 heading="What do you textify?"
                 mode={mode}
               />
-          {/* />
-          <Route exact path="/about" element={ */}
-          <About />
-          {/* } />
-        </Routes> */}
+            }
+          />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
       </div>
     </>
   );
