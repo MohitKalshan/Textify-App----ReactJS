@@ -7,7 +7,7 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} `}
     >
       <div className="container-fluid">
-        <img src="../logo.png" alt="logo" style={{width:45,height:45}} />
+        <img src="public\Logo.png" alt="logo" style={{width:45,height:45}} />
         {/* <Link className="navbar-brand" to="/"> */}
         <a className="navbar-brand" href="/">
           <h2>
@@ -31,7 +31,7 @@ export default function Navbar(props) {
               {/* <Link className="nav-link active" aria-current="page" to="/">
                 Home
               </Link> */}
-              <a className="nav-link active" aria-current="page" to="/">
+              <a className="nav-link active" aria-current="page" href="/">
                 Home
               </a>
             </li>
