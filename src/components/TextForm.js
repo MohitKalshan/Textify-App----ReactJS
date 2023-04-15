@@ -26,7 +26,6 @@ export default function TextForm(props) {
   const handleExtraSpaces = () => {
     let words = text.split(" ");
     let joinedWords = "";
-    // console.log(words);
     words.forEach((elem) => {
       if (elem[0] !== undefined) {
         joinedWords += elem + " ";
@@ -95,9 +94,6 @@ export default function TextForm(props) {
         <button disabled={text.length==0} className="btn btn-dark mx-1 my-1" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
-        {/* <button className="btn btn-secondary mx-1" onClick={handleCopyText}>
-          Copy
-        </button> */}
         <button disabled={text.length==0} className="btn btn-danger my-1" onClick={handleClearText}>
           Clear
         </button>
