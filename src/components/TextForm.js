@@ -71,7 +71,7 @@ export default function TextForm(props) {
     <>
       <div>
         <div className="mb-3" style={{color:props.mode==='dark'?'white':'black'}}>
-          <h1>{props.heading}</h1>
+          <h1 className="my-3">{props.heading}</h1>
           <textarea
             className="form-control"
             value={text}
@@ -82,31 +82,31 @@ export default function TextForm(props) {
           ></textarea>
         </div>
         <div className="btn-group" role="group">
-          <button className="btn btn-primary mx-1 my-1" onClick={handleUpperCase}>
+          <button disabled={text.length==0} className="btn btn-primary mx-1 my-1" onClick={handleUpperCase}>
             Uppercase
           </button>
-          <button className="btn btn-primary  my-1" onClick={handleLowerCase}>
+          <button disabled={text.length==0} className="btn btn-primary  my-1" onClick={handleLowerCase}>
             Lowercase
           </button>
-          <button className="btn btn-primary mx-1 my-1" onClick={handleCapitalize}>
+          <button disabled={text.length==0} className="btn btn-primary mx-1 my-1" onClick={handleCapitalize}>
             Capitalize
           </button>
         </div>
-        <button className="btn btn-dark mx-1 my-1" onClick={handleExtraSpaces}>
+        <button disabled={text.length==0} className="btn btn-dark mx-1 my-1" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
         {/* <button className="btn btn-secondary mx-1" onClick={handleCopyText}>
           Copy
         </button> */}
-        <button className="btn btn-danger my-1" onClick={handleClearText}>
+        <button disabled={text.length==0} className="btn btn-danger my-1" onClick={handleClearText}>
           Clear
         </button>
       </div>
       <div className="container my-1">
-        <button className="btn btn-warning" onClick={speak}>
+        <button disabled={text.length==0}  className="btn btn-warning" onClick={speak}>
           Speak
         </button>
-        <button className="btn btn-success mx-1 my-1" onClick={handleReverse}>
+        <button disabled={text.length==0} className="btn btn-success mx-1 my-1" onClick={handleReverse}>
           Reverse
         </button>
       </div>
