@@ -82,38 +82,38 @@ export default function TextForm(props) {
           ></textarea>
         </div>
         <div className="btn-group" role="group">
-          <button className="btn btn-primary" onClick={handleUpperCase}>
+          <button className="btn btn-primary mx-1 my-1" onClick={handleUpperCase}>
             Uppercase
           </button>
-          <button className="btn btn-primary" onClick={handleLowerCase}>
+          <button className="btn btn-primary  my-1" onClick={handleLowerCase}>
             Lowercase
           </button>
-          <button className="btn btn-primary" onClick={handleCapitalize}>
+          <button className="btn btn-primary mx-1 my-1" onClick={handleCapitalize}>
             Capitalize
           </button>
         </div>
-        <button className="btn btn-dark mx-1 my-2" onClick={handleExtraSpaces}>
+        <button className="btn btn-dark mx-1 my-1" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
         {/* <button className="btn btn-secondary mx-1" onClick={handleCopyText}>
           Copy
         </button> */}
-        <button className="btn btn-danger mx-1" onClick={handleClearText}>
+        <button className="btn btn-danger my-1" onClick={handleClearText}>
           Clear
         </button>
       </div>
-      <div className="container my-2">
+      <div className="container my-1">
         <button className="btn btn-warning" onClick={speak}>
           Speak
         </button>
-        <button className="btn btn-success mx-2" onClick={handleReverse}>
+        <button className="btn btn-success mx-1 my-1" onClick={handleReverse}>
           Reverse
         </button>
       </div>
       <div className="container my-4" style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Summary</h2>
         <p>
-          {text.split(" ").length} Word and {text.length} characters
+          {text.split(" ").filter((elem)=>{ return elem.length!==0}).length} Word and {text.length} characters
         </p>
         <p> {0.08 * text.split(" ").length} Minutes to read</p>
         <h2>Preview</h2>
